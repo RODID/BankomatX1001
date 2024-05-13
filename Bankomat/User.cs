@@ -8,13 +8,14 @@ namespace Bankomat
 {
     public class User
     {
+
         
         public User()
         {
 
         }
 
-        public User(int userId, string username, int password, int cardNumber, string cardType, double money)
+        public User(int userId, string username, int password, string cardNumber, string cardType, double money)
         {
             UserId = userId;
             Username = username;
@@ -27,7 +28,7 @@ namespace Bankomat
         public int UserId { get; set; }
         public string Username { get; set; }
         public int Password { get; set; }
-        public int CardNumber { get; set; }
+        public string CardNumber { get; set; }
         public string CardType { get; set; }
         public double Money { get; set; }
 
@@ -46,12 +47,17 @@ namespace Bankomat
             return CardType;
         }
 
+        public string GetCardNumber()
+        {
+            return CardNumber;
+        }
+
         public double GetBalance()
         {
             return Money;
         } 
 
-        public void SetCardNum(int newCardNum)
+        public void SetCardNum(string newCardNum)
         {
             CardNumber = newCardNum;
         }
